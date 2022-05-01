@@ -9,7 +9,7 @@ before:
 builds:
   - env:
       - CGO_ENABLED=0
-    main: ./main/main.go
+    main: cmd/main/main.go
     goos:
       - linux
       - windows
@@ -20,14 +20,14 @@ archives:
       linux: Linux
       windows: Windows
       386: i386
-      amd64: x86_64
+      amd64: 64
     format_overrides:
       - goos: linux
         format: zip
 checksum:
   name_template: 'checksums.txt'
 snapshot:
-  name_template: "{{ incpatch .Version }}-next"
+  name_template: "{{ incpatch }}-next"
 changelog:
   sort: asc
   filters:
