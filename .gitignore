@@ -14,5 +14,4 @@ main/config.yml
 ./vscode
 .idea/*
 dist/
-
-dist/
+.goreleaser.yaml
